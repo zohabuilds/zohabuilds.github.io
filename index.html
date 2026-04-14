@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Zoha Javaid — Global Talent Architect</title>
+  <title>Zoha Javaid — Global Talent Lead</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@300;400;500;600;700&family=Barlow+Condensed:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
@@ -16,17 +16,17 @@
       --dark3:  #0b0b22;
       --light:  #ffffff;
       --light2: #f4f4ff;
-      --cyan:   #00e5ff;
-      --pink:   #ff2d9b;
-      --violet: #7c3aed;
-      --on-dark:  #f0f0ff;
-      --on-light: #0a0a20;
-      --dim-dark: rgba(240,240,255,0.52);
-      --dim-light: rgba(10,10,32,0.52);
-      --faint-dark: rgba(240,240,255,0.12);
-      --faint-light: rgba(10,10,32,0.10);
-      --cyan-glow: rgba(0,229,255,0.18);
-      --pink-glow: rgba(255,45,155,0.15);
+      --cyan:   #7c3aed;
+      --pink:   #f43f5e;
+      --violet: #f97316;
+      --on-dark:  #f5f0ff;
+      --on-light: #0f0f12;
+      --dim-dark: rgba(245,240,255,0.52);
+      --dim-light: rgba(15,15,18,0.52);
+      --faint-dark: rgba(245,240,255,0.12);
+      --faint-light: rgba(15,15,18,0.10);
+      --cyan-glow: rgba(124,58,237,0.18);
+      --pink-glow: rgba(244,63,94,0.15);
     }
 
     html { scroll-behavior: smooth; }
@@ -42,11 +42,11 @@
     }
 
     /* ── CURSOR ─── */
-    .cursor { position:fixed; width:6px; height:6px; background:var(--cyan);
+    .cursor { position:fixed; width:7px; height:7px; background:var(--cyan);
       border-radius:50%; pointer-events:none; z-index:9999;
-      transform:translate(-50%,-50%); mix-blend-mode:screen; transition:transform .15s; }
+      transform:translate(-50%,-50%); transition:transform .15s; }
     .cursor-ring { position:fixed; width:32px; height:32px;
-      border:1px solid rgba(0,229,255,0.5); border-radius:50%;
+      border:1.5px solid rgba(124,58,237,0.4); border-radius:50%;
       pointer-events:none; z-index:9998; transform:translate(-50%,-50%);
       transition:width .3s,height .3s,opacity .3s; }
     @media(max-width:900px){.cursor,.cursor-ring{display:none} body{cursor:auto}}
@@ -56,27 +56,31 @@
       position:fixed; inset:0 0 auto 0; z-index:500;
       display:flex; align-items:center; justify-content:space-between;
       padding:1.5rem 4rem; transition:all .4s;
+      background:rgba(254,252,255,0.88); backdrop-filter:blur(16px);
+      border-bottom:1px solid rgba(124,58,237,0.08);
     }
     nav.scrolled {
-      background:rgba(4,4,14,0.94); backdrop-filter:blur(16px);
-      border-bottom:1px solid rgba(0,229,255,0.08); padding:1rem 4rem;
+      background:rgba(254,252,255,0.97); backdrop-filter:blur(20px);
+      border-bottom:1px solid rgba(124,58,237,0.12); padding:1rem 4rem;
     }
     .nav-logo { font-family:'Bebas Neue',sans-serif; font-size:1.5rem;
       letter-spacing:.12em; color:var(--cyan); text-decoration:none; }
     .nav-links { display:flex; gap:2rem; list-style:none; align-items:center; }
     .nav-links a { font-family:'Barlow Condensed',sans-serif; font-size:.72rem;
-      letter-spacing:.22em; text-transform:uppercase; color:var(--dim-dark);
+      letter-spacing:.22em; text-transform:uppercase; color:rgba(15,15,18,0.55);
       text-decoration:none; transition:color .2s; }
     .nav-links a:hover { color:var(--cyan); }
+    nav.scrolled .nav-links a { color:rgba(15,15,18,0.55); }
+    nav.scrolled .nav-links a:hover { color:var(--cyan); }
     .nav-resume {
       padding:.5rem 1.2rem;
-      border:1px solid rgba(0,229,255,0.35);
+      border:1px solid rgba(124,58,237,0.3);
       font-family:'Barlow Condensed',sans-serif; font-size:.72rem;
       letter-spacing:.2em; text-transform:uppercase;
       color:var(--cyan); text-decoration:none;
       transition:all .2s; display:flex; align-items:center; gap:.4rem;
     }
-    .nav-resume:hover { background:rgba(0,229,255,0.1); border-color:var(--cyan); }
+    .nav-resume:hover { background:rgba(124,58,237,0.08); border-color:var(--cyan); }
     @media(max-width:900px){ .nav-links{display:none} nav{padding:1.2rem 1.5rem} nav.scrolled{padding:1rem 1.5rem} }
 
     /* ── BUTTONS ─── */
@@ -86,25 +90,26 @@
       letter-spacing:.22em; text-transform:uppercase; text-decoration:none;
       transition:all .25s; white-space:nowrap;
     }
-    .btn-cyan { background:var(--cyan); color:#04040e; }
-    .btn-cyan:hover { background:#33eeff; transform:translateY(-2px); box-shadow:0 10px 32px rgba(0,229,255,0.35); }
-    .btn-outline-dark { background:transparent; border:1px solid rgba(0,229,255,0.4); color:var(--cyan); }
-    .btn-outline-dark:hover { background:rgba(0,229,255,0.08); border-color:var(--cyan); }
+    .btn-cyan { background:var(--cyan); color:#fff; }
+    .btn-cyan:hover { background:#9d6eff; transform:translateY(-2px); box-shadow:0 10px 32px rgba(124,58,237,0.4); }
+    .btn-outline-dark { background:transparent; border:1px solid rgba(124,58,237,0.4); color:var(--cyan); }
+    .btn-outline-dark:hover { background:rgba(124,58,237,0.08); border-color:var(--cyan); }
     .btn-outline-light { background:transparent; border:1.5px solid var(--on-light); color:var(--on-light); }
     .btn-outline-light:hover { background:var(--on-light); color:var(--light); }
-    .btn-download { background:var(--dark); color:var(--cyan); border:1px solid rgba(0,229,255,0.3); }
-    .btn-download:hover { border-color:var(--cyan); box-shadow:0 0 20px rgba(0,229,255,0.2); }
+    .btn-download { background:transparent; color:#0f0f12; border:1px solid rgba(15,15,18,0.2); }
+    .btn-download:hover { border-color:rgba(15,15,18,0.5); background:rgba(15,15,18,0.04); }
+    .btn-outline-dark { background:transparent; border:1px solid rgba(124,58,237,0.35); color:var(--cyan); }
+    .btn-outline-dark:hover { background:rgba(124,58,237,0.06); border-color:var(--cyan); }
 
     /* ── HERO ─── */
     .hero {
       min-height:100vh; display:grid; grid-template-columns:1fr 1fr;
-      position:relative; overflow:hidden; background:var(--dark);
+      position:relative; overflow:hidden; background:#fefcff;
     }
+    /* White fade on left so text area stays clean */
     .hero::after {
-      content:''; position:absolute; inset:0; pointer-events:none;
-      background:
-        radial-gradient(ellipse 55% 55% at 68% 50%, rgba(0,229,255,0.06) 0%, transparent 70%),
-        radial-gradient(ellipse 35% 45% at 15% 65%, rgba(255,45,155,0.05) 0%, transparent 70%);
+      content:''; position:absolute; inset:0; pointer-events:none; z-index:1;
+      background: linear-gradient(to right, #fefcff 38%, rgba(254,252,255,0.5) 60%, transparent 80%);
     }
     .hero-left {
       display:flex; flex-direction:column; justify-content:center;
@@ -120,73 +125,105 @@
     .hero-name {
       font-family:'Bebas Neue',sans-serif;
       font-size:clamp(4rem,8.5vw,9rem); line-height:.9; letter-spacing:.02em;
+      color: #0f0f12;
       opacity:0; animation:fadeUp .9s ease .25s forwards;
     }
     .hero-name .grad {
-      background:linear-gradient(135deg,var(--cyan) 0%,var(--pink) 100%);
+      background:linear-gradient(135deg,#f97316 0%,#f43f5e 45%,#7c3aed 100%);
       -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
     }
     .hero-role {
       font-family:'Barlow Condensed',sans-serif; font-size:clamp(.9rem,1.6vw,1.3rem);
-      font-weight:300; letter-spacing:.2em; text-transform:uppercase; color:var(--dim-dark);
+      font-weight:300; letter-spacing:.2em; text-transform:uppercase;
+      color:rgba(15,15,18,0.5);
       margin-top:1rem; opacity:0; animation:fadeUp .9s ease .4s forwards;
     }
     .hero-tagline {
-      max-width:520px; font-size:.97rem; color:var(--dim-dark); margin-top:1.8rem;
+      max-width:520px; font-size:.97rem; color:rgba(15,15,18,0.62); margin-top:1.8rem;
       line-height:1.85; padding-left:1.4rem;
-      border-left:2px solid; border-image:linear-gradient(to bottom,var(--cyan),var(--pink)) 1;
+      border-left:2px solid; border-image:linear-gradient(to bottom,#f97316,#7c3aed) 1;
       opacity:0; animation:fadeUp .9s ease .55s forwards;
     }
     .hero-tagline strong.hero-hook {
       display:block; font-family:'Bebas Neue',sans-serif; font-size:1.5rem;
-      letter-spacing:.04em; color:var(--on-dark); margin-bottom:.5rem;
+      letter-spacing:.04em; color:#0f0f12; margin-bottom:.5rem;
       -webkit-text-fill-color:initial;
     }
+    .hero-tagline strong { color:#0f0f12; -webkit-text-fill-color:#0f0f12; }
     .hero-cta {
       display:flex; align-items:center; gap:1rem; margin-top:2.5rem; flex-wrap:wrap;
       opacity:0; animation:fadeUp .9s ease .7s forwards;
     }
 
-    .hero-right { position:relative; overflow:hidden; }
-    .globe-canvas { position:absolute; inset:0; width:100%; height:100%; }
-    /* Fade globe into dark on left + top + bottom edges */
-    .globe-fade {
-      position:absolute; inset:0; pointer-events:none; z-index:3;
-      background:
-        linear-gradient(to right, var(--dark) 0%, rgba(4,4,14,0.4) 25%, transparent 55%),
-        linear-gradient(to bottom, var(--dark) 0%, transparent 18%, transparent 82%, var(--dark) 100%);
+    /* ── HERO RIBBON — Stripe flowing gradient ─── */
+    .hero-right { position:relative; overflow:hidden; background:#fefcff; }
+    /* Soft white radial centre — pushes ribbon color to the edges so globe floats clean */
+    .hero-right::after {
+      content:''; position:absolute; inset:0; pointer-events:none; z-index:1;
+      background:radial-gradient(circle at 50% 50%, rgba(254,252,255,0.72) 0%, rgba(254,252,255,0.3) 40%, transparent 72%);
     }
-    .globe-legend {
-      position:absolute; bottom:2.5rem; right:2rem; z-index:4;
-      display:flex; flex-direction:column; gap:.6rem; align-items:flex-end;
-      opacity:0; animation:fadeIn 1s ease 1.2s forwards;
+    .hero-ribbon { position:absolute; inset:0; }
+    .hr-band {
+      position:absolute; border-radius:60%;
+      filter:blur(65px); will-change:transform;
     }
-    .globe-legend-heading {
-      font-family:'Barlow Condensed',sans-serif; font-size:.6rem;
-      letter-spacing:.25em; text-transform:uppercase;
-      color:rgba(240,240,255,0.35); margin-bottom:.4rem; text-align:right;
+    .hr-band-1 {
+      width:130%; height:320px; opacity:.82;
+      background:linear-gradient(105deg, transparent 10%, #fb923c 35%, #f97316 55%, transparent 80%);
+      top:-60px; right:-15%;
+      animation:hrb1 9s ease-in-out infinite alternate;
     }
-    .legend-row { display:flex; align-items:center; gap:.5rem;
-      font-family:'Barlow Condensed',sans-serif; font-size:.62rem;
-      letter-spacing:.2em; text-transform:uppercase; color:var(--dim-dark); }
-    .leg-dot { width:6px; height:6px; border-radius:50%; flex-shrink:0; }
+    .hr-band-2 {
+      width:110%; height:280px; opacity:.7;
+      background:linear-gradient(110deg, transparent 15%, #f472b6 40%, #ec4899 60%, transparent 85%);
+      top:22%; right:-10%;
+      animation:hrb2 12s ease-in-out infinite alternate;
+    }
+    .hr-band-3 {
+      width:100%; height:300px; opacity:.65;
+      background:linear-gradient(115deg, transparent 20%, #a78bfa 40%, #7c3aed 65%, transparent 85%);
+      bottom:-40px; right:-5%;
+      animation:hrb1 10s ease-in-out infinite alternate-reverse;
+    }
+    .hr-band-4 {
+      width:70%; height:200px; opacity:.45;
+      background:radial-gradient(ellipse, #fbbf24 0%, transparent 70%);
+      top:8%; right:18%;
+      animation:hrb2 14s ease-in-out infinite alternate-reverse;
+    }
+    @keyframes hrb1 {
+      from { transform:rotate(-22deg) translateY(0); }
+      to   { transform:rotate(-16deg) translateY(-22px); }
+    }
+    @keyframes hrb2 {
+      from { transform:rotate(-14deg) translateY(0); }
+      to   { transform:rotate(-8deg)  translateY(18px); }
+    }
 
     @media(max-width:900px){
       .hero { grid-template-columns:1fr; min-height:auto; }
       .hero-left { padding:8rem 1.5rem 2rem; }
-      .hero-right { height:60vw; min-height:260px; }
+      .hero-right { height:55vw; min-height:240px; }
     }
 
     /* ── SECTION WRAPPERS ─── */
-    /* Light sections "float" up from the dark with rounded top + shadow — Apple-style card reveal */
     .light-card {
-      background:var(--light); border-radius:32px 32px 0 0;
+      background:var(--light);
       position:relative; z-index:10;
-      box-shadow:0 -24px 80px rgba(0,0,10,0.55), 0 -2px 0 rgba(0,229,255,0.12);
+      border-top:1px solid rgba(0,0,0,0.06);
       color:var(--on-light);
       overflow: hidden;
     }
+    /* Seamless continuation — same white surface, no rounded top, no shadow seam */
+    .light-card-cont {
+      background:var(--light);
+      position:relative; z-index:10;
+      color:var(--on-light);
+      overflow:hidden;
+      border-top:1px solid rgba(0,0,0,0.06);
+    }
     .light-card + .dark-section { margin-top:0; }
+    .light-card-cont + .dark-section { margin-top:0; }
     .dark-section { background:var(--dark2); position:relative; z-index:5; }
     .dark-section2 { background:var(--dark); position:relative; z-index:5; }
 
@@ -209,14 +246,14 @@
 
     .h1-dark {
       font-family:'Bebas Neue',sans-serif; font-size:clamp(2.5rem,5vw,5rem);
-      line-height:.95; letter-spacing:.02em; color:var(--on-dark); margin-bottom:2rem;
+      line-height:.95; letter-spacing:.02em; color:#0f0f12; margin-bottom:2rem;
     }
     .h1-light {
       font-family:'Bebas Neue',sans-serif; font-size:clamp(2.5rem,5vw,5rem);
       line-height:.95; letter-spacing:.02em; color:var(--on-light); margin-bottom:2rem;
     }
     .grad-text {
-      background:linear-gradient(135deg,var(--cyan),var(--pink));
+      background:linear-gradient(135deg,#f97316 0%,#f43f5e 45%,#7c3aed 100%);
       -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
     }
 
@@ -253,67 +290,206 @@
       .stat-item { border-right:none !important; }
     }
 
-    /* ── COMPANY TYPES — dark section ─── */
-    /* ── COMPANY TYPES ─── */
-    .company-types { background:var(--dark2); position:relative; z-index:6; }
-    .types-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; }
+    /* ── COMPANIES — light lavender section ─── */
+    .co-section {
+      background:#f5f2ff; position:relative; z-index:5; overflow:hidden;
+    }
+    .co-section::before {
+      content:''; position:absolute; inset:0; pointer-events:none;
+      background-image: radial-gradient(circle, rgba(124,58,237,0.05) 1px, transparent 1px);
+      background-size:36px 36px;
+    }
+    .co-section-inner { max-width:1200px; margin:0 auto; padding:7rem 4rem 5rem; }
+    @media(max-width:900px){ .co-section-inner { padding:5rem 1.5rem 4rem; } }
+
+    .co-list { margin-top:3.5rem; display:flex; flex-direction:column; gap:1rem; }
+
+    .co-row {
+      position:relative; display:flex; align-items:stretch;
+      padding:2.8rem 2.2rem; border-radius:20px;
+      background:#fff; overflow:hidden; cursor:default;
+      box-shadow:0 2px 20px rgba(124,58,237,0.07);
+      transition:all .35s;
+    }
+    .co-row:hover { box-shadow:0 10px 48px rgba(124,58,237,0.14); transform:translateY(-2px); }
+
+    /* Ghost watermark company name */
+    .co-row-ghost {
+      position:absolute; right:-1rem; top:50%; transform:translateY(-50%);
+      font-family:'Bebas Neue',sans-serif; font-size:clamp(6rem,14vw,11rem);
+      letter-spacing:.04em; line-height:1;
+      color:rgba(124,58,237,0.04); pointer-events:none; user-select:none;
+      white-space:nowrap; transition:color .35s;
+    }
+    .co-row:hover .co-row-ghost { color:rgba(124,58,237,0.07); }
+
+    /* Coloured left accent bar */
+    .co-row-accent {
+      width:3px; border-radius:2px; flex-shrink:0;
+      margin-right:2.5rem; align-self:stretch;
+      opacity:0.7; transition:opacity .35s, width .35s;
+    }
+    .co-row:hover .co-row-accent { opacity:1; width:4px; }
+
+    /* Right-side ambient glow */
+    .co-row-glow {
+      position:absolute; inset:0; pointer-events:none; z-index:0;
+      opacity:0.5; transition:opacity .35s;
+    }
+    .co-row:hover .co-row-glow { opacity:0.8; }
+
+    .co-row-body { position:relative; z-index:1; flex:1; min-width:0; }
+
+    .co-row-top {
+      display:flex; align-items:baseline; justify-content:space-between;
+      margin-bottom:.3rem;
+    }
+    .co-name {
+      font-family:'Bebas Neue',sans-serif; font-size:2.8rem;
+      letter-spacing:.04em; color:#0f0f12; line-height:1;
+    }
+    .co-period {
+      font-family:'Barlow Condensed',sans-serif; font-size:.68rem;
+      letter-spacing:.2em; text-transform:uppercase; font-weight:500;
+    }
+    .co-role {
+      font-family:'Barlow Condensed',sans-serif; font-size:.68rem;
+      letter-spacing:.22em; text-transform:uppercase; font-weight:600;
+      margin-bottom:1.1rem;
+    }
+    .co-headline {
+      font-family:'Syne',sans-serif; font-size:1.08rem; font-weight:600;
+      color:rgba(15,15,18,0.65); line-height:1.6; margin-bottom:.85rem;
+      max-width:620px; transition:color .35s;
+    }
+    .co-row:hover .co-headline { color:#0f0f12; }
+    .co-meta {
+      font-family:'Barlow Condensed',sans-serif; font-size:.7rem;
+      letter-spacing:.06em; color:rgba(15,15,18,0.38); line-height:2.0;
+      transition:color .35s;
+    }
+    .co-row:hover .co-meta { color:rgba(15,15,18,0.58); }
+
+    /* Right stat panel */
+    .co-row-stat {
+      position:relative; z-index:1;
+      display:flex; flex-direction:column; align-items:flex-end;
+      justify-content:center; flex-shrink:0;
+      padding-left:3rem; min-width:160px; text-align:right;
+    }
+    .co-stat-num {
+      font-family:'Bebas Neue',sans-serif; font-size:clamp(3.5rem,6vw,5.5rem);
+      line-height:1; letter-spacing:.02em;
+      background:linear-gradient(135deg,#f97316 0%,#f43f5e 50%,#7c3aed 100%);
+      -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+      transition:transform .35s;
+    }
+    .co-row:hover .co-stat-num { transform:scale(1.05); }
+    .co-stat-label {
+      font-family:'Barlow Condensed',sans-serif; font-size:.62rem;
+      letter-spacing:.22em; text-transform:uppercase;
+      color:rgba(15,15,18,0.32); margin-top:.3rem;
+      transition:color .35s;
+    }
+    .co-row:hover .co-stat-label { color:rgba(15,15,18,0.58); }
+
+    .cyan-text   { color:var(--cyan); }
+    .pink-text   { color:var(--pink); }
+    .violet-text { color:#f97316;     }
+
+    @media(max-width:768px){
+      .co-row-stat { min-width:100px; padding-left:1.5rem; }
+      .co-stat-num { font-size:2.8rem; }
+    }
+
+    /* ── COMPANY CARDS — cinematic full-bleed ─── */
+    .company-types { background:var(--dark); position:relative; z-index:6; }
+    .types-grid { display:flex; flex-direction:column; gap:0; }
 
     .type-card {
-      position:relative; padding:2.5rem 2rem;
-      overflow:hidden; transition:transform .3s;
+      position:relative; width:100%;
+      min-height:65vh; display:flex; align-items:flex-end;
+      padding:4rem 6rem 4rem; overflow:hidden;
+      border-top:1px solid rgba(255,255,255,0.05);
     }
-    .type-card:hover { transform:translateY(-4px); }
+    .type-card:first-child { border-top:none; }
+
+    /* Base dark gradient per card */
+    .card-vc   { background: #020810; }
+    .card-boot { background: #080210; }
+    .card-acq  { background: #050210; }
+
+    /* Atmospheric orb layer */
+    .type-card-bg {
+      position:absolute; inset:0; z-index:0;
+      pointer-events:none;
+    }
+    .card-vc .type-card-bg {
+      background:
+        radial-gradient(ellipse 60% 70% at 80% 20%, rgba(124,58,237,0.13) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 50% at 90% 80%, rgba(124,58,237,0.05) 0%, transparent 60%);
+    }
+    .card-boot .type-card-bg {
+      background:
+        radial-gradient(ellipse 60% 70% at 78% 25%, rgba(244,63,94,0.13) 0%, transparent 70%),
+        radial-gradient(ellipse 35% 45% at 15% 70%, rgba(244,63,94,0.05) 0%, transparent 60%);
+    }
+    .card-acq .type-card-bg {
+      background:
+        radial-gradient(ellipse 60% 70% at 80% 20%, rgba(124,58,237,0.14) 0%, transparent 70%),
+        radial-gradient(ellipse 30% 40% at 10% 75%, rgba(124,58,237,0.05) 0%, transparent 60%);
+    }
+
+    /* Bottom-up vignette so text is always readable */
     .type-card::before {
-      content:''; position:absolute; inset:0;
-      opacity:0; transition:opacity .3s; pointer-events:none;
+      content:''; position:absolute; inset:0; z-index:1;
+      background:linear-gradient(to top,
+        rgba(4,4,14,0.90) 0%,
+        rgba(4,4,14,0.40) 45%,
+        rgba(4,4,14,0.10) 100%);
     }
-    .type-card:hover::before { opacity:1; }
 
-    .card-vc { background:linear-gradient(145deg,#07081e,#0a0b25); border-top:2px solid var(--cyan); }
-    .card-vc::before { background:radial-gradient(ellipse at top left,var(--cyan-glow),transparent 65%); }
-    .card-boot { background:linear-gradient(145deg,#1a0714,#200a1a); border-top:2px solid var(--pink); }
-    .card-boot::before { background:radial-gradient(ellipse at top left,var(--pink-glow),transparent 65%); }
-    .card-acq { background:linear-gradient(145deg,#0e0a1e,#130f28); border-top:2px solid var(--violet); }
-    .card-acq::before { background:radial-gradient(ellipse at top left,rgba(124,58,237,0.15),transparent 65%); }
-
-    .card-type-tag {
-      display:inline-block; padding:.18rem .7rem; border:1px solid;
-      font-family:'Barlow Condensed',sans-serif; font-size:.62rem;
-      letter-spacing:.2em; text-transform:uppercase; margin-bottom:1.2rem;
+    /* Subtle grid overlay for texture */
+    .type-card::after {
+      content:''; position:absolute; inset:0; z-index:1; pointer-events:none;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.022) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.022) 1px, transparent 1px);
+      background-size:60px 60px;
+      mask-image:linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.4) 40%, rgba(0,0,0,0.4) 80%, transparent 100%);
     }
-    .tag-cyan { border-color:rgba(0,229,255,0.35); color:var(--cyan); }
-    .tag-pink { border-color:rgba(255,45,155,0.35); color:var(--pink); }
-    .tag-violet { border-color:rgba(124,58,237,0.4); color:#a78bfa; }
-    .card-co { font-family:'Bebas Neue',sans-serif; font-size:2.8rem;
-      letter-spacing:.04em; line-height:1; color:var(--on-dark); margin-bottom:.3rem; }
-    .card-sub { font-family:'Barlow Condensed',sans-serif; font-size:.76rem;
-      letter-spacing:.06em; color:#d0d0f0; font-weight:500; margin-bottom:1rem; }
+
+    .card-content {
+      position:relative; z-index:2; max-width:820px;
+    }
+    .card-label {
+      font-family:'Barlow Condensed',sans-serif; font-size:.68rem;
+      letter-spacing:.28em; text-transform:uppercase;
+      margin-bottom:1.4rem; display:flex; align-items:center; gap:.8rem;
+    }
+    .card-label-line {
+      display:inline-block; width:28px; height:1px; flex-shrink:0;
+    }
+    .col-cyan  .card-label { color:var(--cyan); }
+    .col-cyan  .card-label-line { background:var(--cyan); }
+    .col-pink  .card-label { color:var(--pink); }
+    .col-pink  .card-label-line { background:var(--pink); }
+    .col-violet .card-label { color:#a78bfa; }
+    .col-violet .card-label-line { background:#a78bfa; }
+
     .card-headline {
-      font-family:'Bebas Neue',sans-serif; font-size:1.25rem;
-      line-height:1.1; letter-spacing:.03em;
-      color:var(--on-dark); margin-bottom:.9rem;
+      font-family:'Bebas Neue',sans-serif; font-size:clamp(2.2rem,4.5vw,3.8rem);
+      line-height:1.0; letter-spacing:.02em;
+      color:var(--on-dark); margin-bottom:1.6rem;
     }
     .card-meta {
-      font-family:'Barlow Condensed',sans-serif; font-size:.7rem;
-      letter-spacing:.06em; color:#9090b8; line-height:1.7;
-      margin-bottom:1.2rem;
+      font-family:'Barlow Condensed',sans-serif; font-size:.74rem;
+      letter-spacing:.07em; color:rgba(240,240,255,0.42); line-height:2.0;
     }
-    .card-desc { font-size:.88rem; color:var(--dim-dark); line-height:1.75; margin-bottom:1.4rem; }
-    .card-metric {
-      display:inline-block; padding:.28rem .85rem;
-      font-family:'Barlow Condensed',sans-serif; font-size:.68rem;
-      letter-spacing:.15em; text-transform:uppercase; border:1px solid; margin-bottom:.8rem;
+    @media(max-width:768px){
+      .type-card { padding:3rem 2rem; min-height:55vh; }
+      .card-headline { font-size:clamp(1.8rem,6vw,2.8rem); }
     }
-    .metric-cyan { border-color:rgba(0,229,255,0.3); color:var(--cyan); }
-    .metric-pink { border-color:rgba(255,45,155,0.3); color:var(--pink); }
-    .metric-violet { border-color:rgba(124,58,237,0.3); color:#a78bfa; }
-    .investors { display:flex; flex-wrap:wrap; gap:.35rem; margin-top:.6rem; }
-    .inv-tag { font-family:'Barlow Condensed',sans-serif; font-size:.6rem;
-      letter-spacing:.08em; padding:.15rem .55rem;
-      background:rgba(0,229,255,0.08); color:rgba(0,229,255,0.7);
-      border:1px solid rgba(0,229,255,0.12); }
-
-    @media(max-width:900px){ .types-grid{ grid-template-columns:1fr; } }
 
     /* ── ABOUT — light card ─── */
     .about-grid { display:grid; grid-template-columns:1.1fr 1fr; gap:5rem; align-items:start; }
@@ -364,16 +540,16 @@
       display:flex; align-items:center; gap:1.5rem; padding:1.5rem 2rem;
       background:var(--light2); border-left:3px solid; border-radius:0 50px 50px 0;
     }
-    .callout-1 { border-color:var(--pink); }
-    .callout-2 { border-color:#0050cc; }
-    .callout-3 { border-color:#6c28d4; }
+    .callout-1 { border-color:#f43f5e; }
+    .callout-2 { border-color:#7c3aed; }
+    .callout-3 { border-color:#f97316; }
     .callout-num {
       font-family:'Bebas Neue',sans-serif; font-size:2.6rem; line-height:1;
       flex-shrink:0; min-width:3.5rem;
     }
-    .callout-1 .callout-num { color:var(--pink); }
-    .callout-2 .callout-num { color:#0050cc; }
-    .callout-3 .callout-num { color:#6c28d4; }
+    .callout-1 .callout-num { color:#f43f5e; }
+    .callout-2 .callout-num { color:#7c3aed; }
+    .callout-3 .callout-num { color:#f97316; }
     .callout-body { font-size:.85rem; color:var(--dim-light); line-height:1.65; }
 
     @media(max-width:900px){ .about-grid{grid-template-columns:1fr;gap:3rem;} }
@@ -421,48 +597,253 @@
       .exp-item { grid-template-columns:1fr; gap:1.5rem; padding:2.5rem 0; }
     }
 
-    /* ── EXPERTISE — light card ─── */
-    /* Magazine/editorial layout — NOT a uniform grid */
-    .expertise-layout { display:flex; flex-direction:column; gap:1.5rem; }
-    .exp-row { display:flex; gap:1.5rem; }
+    /* ── EXPERTISE — flowing gradient wash (Love.png palette) ─── */
+    .light-card-cont { position:relative; }
+    .expertise-glow {
+      position:absolute; inset:0; overflow:hidden; pointer-events:none; z-index:0;
+    }
+    .eg-blob {
+      position:absolute; border-radius:50%; filter:blur(80px);
+    }
+    .eg-blob-1 {
+      width:500px; height:380px; opacity:.28;
+      background:radial-gradient(ellipse, #f9a8d4 0%, transparent 70%);
+      top:-80px; right:5%; animation:egb1 11s ease-in-out infinite alternate;
+    }
+    .eg-blob-2 {
+      width:420px; height:340px; opacity:.22;
+      background:radial-gradient(ellipse, #ddd6fe 0%, transparent 70%);
+      top:30%; right:25%; animation:egb2 13s ease-in-out infinite alternate;
+    }
+    .eg-blob-3 {
+      width:380px; height:300px; opacity:.20;
+      background:radial-gradient(ellipse, #fed7aa 0%, transparent 70%);
+      bottom:-40px; right:10%; animation:egb1 9s ease-in-out infinite alternate-reverse;
+    }
+    .eg-blob-4 {
+      width:320px; height:260px; opacity:.18;
+      background:radial-gradient(ellipse, #e9d5ff 0%, transparent 70%);
+      top:10%; left:60%; animation:egb2 15s ease-in-out infinite alternate-reverse;
+    }
+    @keyframes egb1 {
+      from { transform:translateY(0) rotate(-5deg); }
+      to   { transform:translateY(-25px) rotate(5deg); }
+    }
+    @keyframes egb2 {
+      from { transform:translateY(0) rotate(8deg); }
+      to   { transform:translateY(20px) rotate(-3deg); }
+    }
+    /* ── EXPERTISE PILLS ─── */
+    .expertise-layout {
+      display:flex; flex-direction:column; gap:2rem;
+      align-items:center; position:relative; z-index:1;
+    }
+    .exp-sub-label {
+      font-family:'Barlow Condensed',sans-serif; font-size:.6rem;
+      letter-spacing:.32em; text-transform:uppercase;
+      color:rgba(15,15,18,0.35); text-align:center;
+      display:flex; align-items:center; gap:.8rem;
+    }
+    .exp-sub-label::before, .exp-sub-label::after {
+      content:''; display:block; width:24px; height:1px;
+      background:rgba(15,15,18,0.15);
+    }
+    .exp-pool {
+      display:flex; flex-wrap:wrap; gap:.85rem;
+      justify-content:center; max-width:860px;
+    }
+    /* Domain pills — neutral outlined */
+    .exp-tag--domain {
+      padding:.72rem 1.5rem; border-radius:100px;
+      border:1px solid rgba(15,15,18,0.14);
+      font-family:'Barlow Condensed',sans-serif; font-size:.82rem;
+      font-weight:500; letter-spacing:.08em; text-transform:uppercase;
+      color:rgba(15,15,18,0.52); background:transparent;
+      cursor:default; white-space:nowrap; transition:all .25s;
+    }
+    .exp-tag--domain:hover { border-color:rgba(15,15,18,0.32); color:rgba(15,15,18,0.82); transform:translateY(-2px); }
+    /* Role pills — coloured */
     .exp-tag {
-      display:flex; align-items:center; gap:.75rem;
-      padding:.8rem 1.4rem; border:1.5px solid var(--faint-light);
-      transition:all .25s; cursor:default;
-      /* Pill shape */
-      border-radius:100px;
-      font-family:'Barlow Condensed',sans-serif; font-size:.85rem;
-      font-weight:600; letter-spacing:.06em; text-transform:uppercase;
-      color:var(--on-light); white-space:nowrap;
+      padding:.82rem 1.6rem; border-radius:100px; border:1.5px solid;
+      font-family:'Barlow Condensed',sans-serif; font-size:.83rem;
+      font-weight:600; letter-spacing:.07em; text-transform:uppercase;
+      cursor:default; white-space:nowrap; backdrop-filter:blur(4px);
+      transition:all .25s;
     }
-    .exp-tag:hover { border-color:var(--pink); color:var(--pink); transform:translateY(-2px); }
-    .exp-tag.featured {
-      background:var(--on-light); color:var(--light);
-      border-color:var(--on-light); font-size:1rem; padding:1rem 2rem;
-    }
-    .exp-tag.featured:hover { background:var(--pink); border-color:var(--pink); color:var(--light); }
-    .exp-tag-icon { font-size:1rem; }
+    .exp-tag:hover { transform:translateY(-2px); }
+    .exp-tag--violet { color:#7c3aed; border-color:rgba(124,58,237,0.28); background:rgba(124,58,237,0.06); }
+    .exp-tag--violet:hover { background:rgba(124,58,237,0.12); border-color:#7c3aed; }
+    .exp-tag--rose { color:#f43f5e; border-color:rgba(244,63,94,0.28); background:rgba(244,63,94,0.06); }
+    .exp-tag--rose:hover { background:rgba(244,63,94,0.12); border-color:#f43f5e; }
+    .exp-tag--amber { color:#d97706; border-color:rgba(217,119,6,0.28); background:rgba(249,115,22,0.06); }
+    .exp-tag--amber:hover { background:rgba(249,115,22,0.12); border-color:#f97316; }
+    .exp-tag--pink { color:#db2777; border-color:rgba(236,72,153,0.28); background:rgba(236,72,153,0.06); }
+    .exp-tag--pink:hover { background:rgba(236,72,153,0.12); border-color:#ec4899; }
 
-    /* ── TOOLS — dark ─── */
-    .tools-flow { display:flex; flex-wrap:wrap; gap:.65rem; margin-top:.5rem; }
-    .tool-pill {
-      padding:.45rem 1.2rem; border-radius:100px;
-      background:transparent; border:1px solid var(--faint-dark);
-      font-family:'Barlow Condensed',sans-serif; font-size:.75rem;
-      letter-spacing:.12em; text-transform:uppercase; color:var(--dim-dark);
-      cursor:default; transition:all .2s;
+    /* ── TOOLS — light warm ─── */
+    .tools-section {
+      background:#fdf9f5; position:relative; z-index:5; overflow:hidden;
+      padding:7rem 0;
     }
-    .tool-pill:hover {
-      background:rgba(0,229,255,0.08); border-color:rgba(0,229,255,0.5); color:var(--cyan);
+    /* Subtle ambient glows for light bg */
+    .tools-section::before {
+      content:''; position:absolute; inset:0; pointer-events:none;
+      background:
+        radial-gradient(ellipse 50% 60% at 10% 50%, rgba(124,58,237,0.06) 0%, transparent 65%),
+        radial-gradient(ellipse 45% 55% at 90% 40%, rgba(249,115,22,0.05) 0%, transparent 65%);
+    }
+    /* Header area */
+    .tools-header { max-width:1200px; margin:0 auto; padding:0 4rem 3.5rem; position:relative; z-index:1; }
+    @media(max-width:900px){ .tools-header { padding:0 1.5rem 2.5rem; } }
+
+    /* Logo wall */
+    .logo-grid {
+      display:grid; grid-template-columns:repeat(7,1fr);
+      gap:1rem; max-width:1100px; margin:0 auto; padding:0 4rem;
+      position:relative; z-index:1;
+    }
+    .logo-tile {
+      display:flex; flex-direction:column; align-items:center;
+      gap:.75rem; padding:1.4rem .8rem 1.2rem;
+      border-radius:14px; border:1px solid rgba(15,15,18,0.08);
+      background:#fff; cursor:default; transition:all .25s;
+    }
+    .logo-tile:hover {
+      border-color:rgba(124,58,237,0.2);
+      box-shadow:0 4px 20px rgba(0,0,0,0.08); transform:translateY(-3px);
+    }
+    .logo-mark {
+      width:40px; height:40px; border-radius:10px;
+      display:flex; align-items:center; justify-content:center;
+      font-family:'Barlow Condensed',sans-serif; font-size:.75rem;
+      font-weight:700; letter-spacing:.04em; color:#fff;
+      flex-shrink:0; transition:transform .25s;
+    }
+    .logo-tile:hover .logo-mark { transform:scale(1.08); }
+    .logo-icon {
+      width:22px; height:22px;
+      filter:brightness(0) invert(1);
+      pointer-events:none;
+    }
+    .logo-name {
+      font-family:'Barlow Condensed',sans-serif; font-size:.58rem;
+      letter-spacing:.14em; text-transform:uppercase;
+      color:rgba(15,15,18,0.42); text-align:center; line-height:1.35;
+      transition:color .25s;
+    }
+    .logo-tile:hover .logo-name { color:rgba(15,15,18,0.78); }
+    @media(max-width:1000px){ .logo-grid { grid-template-columns:repeat(4,1fr); padding:0 1.5rem; } }
+    @media(max-width:560px){ .logo-grid { grid-template-columns:repeat(3,1fr); } }
+
+    /* Pills */
+    .tp {
+      display:inline-flex; align-items:center; white-space:nowrap;
+      border-radius:100px; border:1px solid; cursor:default;
+      font-family:'Barlow Condensed',sans-serif; letter-spacing:.12em; text-transform:uppercase;
+      font-weight:500; transition:all .3s cubic-bezier(.4,0,.2,1);
+      position:relative; overflow:hidden; flex-shrink:0;
+    }
+    /* Shine sweep */
+    .tp::after {
+      content:''; position:absolute; inset:0; border-radius:100px;
+      background:linear-gradient(105deg, transparent 35%, rgba(255,255,255,0.12) 50%, transparent 65%);
+      transform:translateX(-120%); transition:transform .5s;
+    }
+    .tp:hover::after { transform:translateX(120%); }
+    .tp:hover { transform:scale(1.06); }
+
+    /* Sizes */
+    .tp-xl { padding:.8rem 2rem;    font-size:1rem;   }
+    .tp-lg { padding:.6rem 1.55rem; font-size:.85rem; }
+    .tp-md { padding:.48rem 1.2rem; font-size:.74rem; }
+    .tp-sm { padding:.36rem .9rem;  font-size:.63rem; }
+
+    /* Colours */
+    /* Violet — AI/featured tools only */
+    .tp-cyan {
+      color:rgba(167,139,250,0.85); border-color:rgba(124,58,237,0.25);
+      background:rgba(124,58,237,0.07);
+    }
+    .tp-cyan:hover {
+      color:#a78bfa; border-color:rgba(124,58,237,0.55);
+      background:rgba(124,58,237,0.12);
+      box-shadow:0 0 24px rgba(124,58,237,0.22), inset 0 0 12px rgba(124,58,237,0.08);
+    }
+    /* Default — all other tools on light bg */
+    .tp-white {
+      color:rgba(15,15,18,0.45); border-color:rgba(15,15,18,0.12);
+      background:rgba(255,255,255,0.6);
+    }
+    .tp-white:hover {
+      color:rgba(15,15,18,0.85); border-color:rgba(15,15,18,0.3);
+      background:#fff;
+      box-shadow:0 4px 16px rgba(0,0,0,0.06);
+    }
+
+    /* Dot separator between pills */
+    .mq-sep {
+      width:4px; height:4px; border-radius:50%; flex-shrink:0;
+      background:rgba(15,15,18,0.12);
     }
 
     /* ── CONTACT — dark ─── */
-    .contact-section { background:var(--dark); overflow:hidden; }
+    /* ── STRIPE FLOW ─── */
+    .stripe-flow {
+      position:relative; overflow:hidden;
+      height:260px;
+      background:linear-gradient(to bottom, #fefcff 0%, var(--dark) 100%);
+      display:flex; align-items:center; justify-content:center;
+    }
+    .sf-blob {
+      position:absolute; border-radius:50%;
+      filter:blur(90px); will-change:transform;
+    }
+    .sf-blob-1 {
+      width:560px; height:340px;
+      background:radial-gradient(ellipse, #f97316 0%, transparent 70%);
+      opacity:.55; top:-60px; left:5%;
+      animation:sf1 9s ease-in-out infinite alternate;
+    }
+    .sf-blob-2 {
+      width:480px; height:320px;
+      background:radial-gradient(ellipse, #f43f5e 0%, transparent 70%);
+      opacity:.45; top:20px; left:32%;
+      animation:sf2 12s ease-in-out infinite alternate;
+    }
+    .sf-blob-3 {
+      width:520px; height:360px;
+      background:radial-gradient(ellipse, #7c3aed 0%, transparent 70%);
+      opacity:.5; top:-40px; right:5%;
+      animation:sf3 10s ease-in-out infinite alternate;
+    }
+    .sf-blob-4 {
+      width:300px; height:200px;
+      background:radial-gradient(ellipse, #a855f7 0%, transparent 70%);
+      opacity:.35; bottom:-20px; left:55%;
+      animation:sf2 14s ease-in-out infinite alternate-reverse;
+    }
+    @keyframes sf1 {
+      from { transform:translateX(0) translateY(0) rotate(-8deg); }
+      to   { transform:translateX(60px) translateY(30px) rotate(4deg); }
+    }
+    @keyframes sf2 {
+      from { transform:translateX(0) translateY(0) rotate(5deg); }
+      to   { transform:translateX(-40px) translateY(20px) rotate(-5deg); }
+    }
+    @keyframes sf3 {
+      from { transform:translateX(0) translateY(0) rotate(-5deg); }
+      to   { transform:translateX(-50px) translateY(25px) rotate(8deg); }
+    }
+    /* stripe-flow between About and Expertise: light bg, blobs only */
+    .stripe-flow::after { display:none; }
+    .stripe-flow { background:#ffffff; }
+
+    .contact-section { background:#ffffff; overflow:hidden; position:relative; }
     .contact-glow {
       position:absolute; inset:0; pointer-events:none;
       background:
-        radial-gradient(ellipse 70% 60% at 50% 100%, rgba(0,229,255,0.07), transparent 70%),
-        radial-gradient(ellipse 45% 50% at 25% 80%, rgba(255,45,155,0.06), transparent 70%);
+        radial-gradient(ellipse 60% 55% at 50% 110%, rgba(124,58,237,0.07), transparent 70%),
+        radial-gradient(ellipse 40% 40% at 80% 80%, rgba(249,115,22,0.05), transparent 70%);
     }
     .contact-inner {
       text-align:center; max-width:1000px; margin:0 auto; padding:9rem 4rem;
@@ -471,31 +852,123 @@
     .contact-head {
       font-family:'Bebas Neue',sans-serif;
       font-size:clamp(3rem,9vw,8rem); line-height:.92;
-      letter-spacing:.02em; color:var(--on-dark); margin-bottom:1.5rem;
+      letter-spacing:.02em; color:#0f0f12; margin-bottom:1.5rem;
     }
     .contact-sub {
-      font-size:.98rem; color:var(--dim-dark); max-width:480px;
+      font-size:.98rem; color:rgba(15,15,18,0.55); max-width:480px;
       margin:0 auto 3rem; line-height:1.85;
     }
     .contact-actions { display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; }
     @media(max-width:900px){ .contact-inner{padding:6rem 1.5rem;} }
 
+    /* ── CO-ROW COLLAPSIBLE ─── */
+    .co-row { flex-direction:column; align-items:stretch; }
+    .co-row-inner {
+      display:flex; align-items:stretch; gap:0;
+    }
+
+    /* Row is the clickable target */
+    .co-row { cursor:pointer; }
+    .co-row:hover { background:rgba(255,255,255,0.025); }
+
+    /* Chevron in the stat panel */
+    .co-chevron {
+      margin-top:1rem; font-size:.9rem;
+      color:rgba(240,240,255,0.25);
+      transition:transform .38s cubic-bezier(.4,0,.2,1), color .25s;
+      line-height:1;
+    }
+    .co-row.open .co-chevron {
+      transform:rotate(180deg);
+      color:rgba(240,240,255,0.6);
+    }
+    .co-row:hover .co-chevron { color:rgba(240,240,255,0.5); }
+
+    /* Dropdown panel */
+    .co-dropdown {
+      max-height:0; overflow:hidden;
+      transition:max-height .45s cubic-bezier(.4,0,.2,1), opacity .35s ease;
+      opacity:0;
+    }
+    .co-dropdown.open { opacity:1; }
+    .co-dropdown-inner {
+      padding:1.4rem 0 .4rem;
+      border-top:1px solid rgba(0,0,0,0.06);
+      margin-top:.8rem;
+    }
+    .co-dropdown-list {
+      list-style:none; display:flex; flex-direction:column; gap:.85rem;
+    }
+    .co-dropdown-list li {
+      display:flex; gap:.85rem;
+      font-family:'Syne',sans-serif; font-size:.88rem;
+      color:rgba(15,15,18,0.58); line-height:1.7;
+    }
+    .co-dropdown-list li::before {
+      content:'→'; flex-shrink:0; font-size:.72rem;
+      margin-top:.25rem;
+    }
+    .li-d-cyan::before   { color:var(--cyan); }
+    .li-d-pink::before   { color:var(--pink); }
+    .li-d-violet::before { color:#f97316; }
+
     /* ── FOOTER ─── */
     footer {
-      background:var(--dark); border-top:1px solid var(--faint-dark);
+      background:#fff; border-top:1px solid rgba(124,58,237,0.08);
       padding:1.8rem 4rem; display:grid; grid-template-columns:1fr 1fr 1fr;
       align-items:center; position:relative; z-index:20;
     }
     .footer-name { font-family:'Bebas Neue',sans-serif; font-size:1.1rem;
-      letter-spacing:.1em; color:var(--dim-dark); }
+      letter-spacing:.1em; color:rgba(15,15,18,0.5); }
     .footer-center { font-family:'Barlow Condensed',sans-serif; font-size:.68rem;
-      letter-spacing:.15em; text-transform:uppercase; color:rgba(240,240,255,0.3);
+      letter-spacing:.15em; text-transform:uppercase; color:rgba(15,15,18,0.3);
       text-align:center; }
-    .footer-center span { display:block; margin-top:.25rem; color:rgba(240,240,255,0.18); }
+    .footer-center span { display:block; margin-top:.25rem; color:rgba(15,15,18,0.18); }
     .footer-right { font-family:'Barlow Condensed',sans-serif; font-size:.68rem;
-      letter-spacing:.15em; text-transform:uppercase; color:rgba(240,240,255,0.3);
+      letter-spacing:.15em; text-transform:uppercase; color:rgba(15,15,18,0.3);
       text-align:right; }
-    .footer-right span { display:block; margin-top:.25rem; color:rgba(240,240,255,0.18); }
+    .footer-right span { display:block; margin-top:.25rem; color:rgba(15,15,18,0.18); }
+
+    /* ── HERO GLOBE ─── */
+    .hero-globe-canvas {
+      position:absolute; top:50%; left:50%;
+      transform:translate(-50%,-50%);
+      width:min(520px,88%); height:min(520px,88%);
+      border-radius:50%; z-index:2;
+      cursor:grab;
+    }
+    .hero-globe-canvas:active { cursor:grabbing; }
+    @media(max-width:900px){
+      .hero-globe-canvas { width:min(220px,62vw); height:min(220px,62vw); }
+    }
+
+    /* ── GLOBE REGION STACK ─── */
+    .globe-regions {
+      position:absolute; right:2rem; top:50%;
+      transform:translateY(-50%);
+      z-index:3; display:flex; flex-direction:column;
+      align-items:flex-end; gap:.55rem;
+    }
+    .globe-regions-label {
+      font-family:'Barlow Condensed',sans-serif; font-size:.58rem;
+      letter-spacing:.3em; text-transform:uppercase;
+      color:rgba(15,15,18,0.62);
+    }
+    .globe-regions-rule {
+      width:28px; height:1px; background:rgba(15,15,18,0.12);
+    }
+    .globe-regions-list { list-style:none; display:flex; flex-direction:column; gap:.55rem; align-items:flex-end; }
+    .globe-regions-list li {
+      display:flex; align-items:center; gap:.55rem;
+      font-family:'Barlow Condensed',sans-serif; font-size:.68rem;
+      letter-spacing:.18em; text-transform:uppercase;
+      color:rgba(15,15,18,0.42);
+    }
+    .gr-dot {
+      width:5px; height:5px; border-radius:50%; flex-shrink:0;
+    }
+    @media(max-width:900px){ .globe-regions { display:none; } }
+
     @media(max-width:900px){ footer{flex-direction:column;gap:.6rem;text-align:center;padding:1.5rem;}
       .footer-right,.footer-center{text-align:center;} }
 
@@ -519,7 +992,6 @@
     <a href="#" class="nav-logo">ZJ</a>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
-      <li><a href="#experience">Experience</a></li>
       <li><a href="#expertise">Expertise</a></li>
       <li><a href="#contact">Contact</a></li>
       <li>
@@ -533,9 +1005,8 @@
   <!-- ═══ HERO ═════════════════════════════════ -->
   <section class="hero">
     <div class="hero-left">
-      <div class="hero-eyebrow"><span class="hero-eyebrow-line"></span>Global Talent Architect</div>
       <h1 class="hero-name">Zoha<br/><span class="grad">Javaid</span></h1>
-      <p class="hero-role">Lead Talent Acquisition Specialist</p>
+      <p class="hero-role">Global Talent Lead</p>
       <p class="hero-tagline">
         <strong class="hero-hook">I build teams that build products.</strong>
         From zero infrastructure to fully scaled hiring functions — I've placed 80+ technical and leadership hires across <strong style="color:var(--on-dark)">EMEA, APAC &amp; LATAM</strong> for venture-backed, bootstrapped and PE-backed companies. Fast, intentional, and candidate-first.
@@ -547,81 +1018,131 @@
       </div>
     </div>
     <div class="hero-right">
-      <canvas class="globe-canvas" id="gc"></canvas>
-      <div class="globe-fade"></div>
-      <div class="globe-legend">
-        <div class="globe-legend-heading">Where I've Hired</div>
-        <div class="legend-row"><div class="leg-dot" style="background:var(--cyan)"></div>APAC</div>
-        <div class="legend-row"><div class="leg-dot" style="background:var(--pink)"></div>MENA / GCC</div>
-        <div class="legend-row"><div class="leg-dot" style="background:#a78bfa"></div>EMEA</div>
-        <div class="legend-row"><div class="leg-dot" style="background:#34d399"></div>Africa</div>
-        <div class="legend-row"><div class="leg-dot" style="background:#f59e0b"></div>LATAM</div>
+      <div class="hero-ribbon" aria-hidden="true">
+        <div class="hr-band hr-band-1"></div>
+        <div class="hr-band hr-band-2"></div>
+        <div class="hr-band hr-band-3"></div>
+        <div class="hr-band hr-band-4"></div>
+      </div>
+      <canvas class="hero-globe-canvas" id="gc"></canvas>
+      <div class="globe-regions">
+        <div class="globe-regions-label">Hired From</div>
+        <div class="globe-regions-rule"></div>
+        <ul class="globe-regions-list">
+          <li>EMEA<span class="gr-dot" style="background:#f97316"></span></li>
+          <li>APAC<span class="gr-dot" style="background:#f43f5e"></span></li>
+          <li>GCC<span class="gr-dot" style="background:#7c3aed"></span></li>
+          <li>LATAM<span class="gr-dot" style="background:#ec4899"></span></li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <!-- ═══ STATS — White floating card ══════════ -->
-  <div class="light-card">
-    <div class="section-inner">
+  <!-- ═══ COMPANIES — Light lavender section ═══ -->
+  <div class="co-section">
+    <div class="co-section-inner">
       <div class="label-light reveal">Impact</div>
-      <div class="stats-grid">
-        <div class="stat-item reveal">
-          <span class="stat-number">80+</span>
-          <span class="stat-label">Tech Roles Filled</span>
+
+      <div class="co-list">
+
+        <div class="co-row reveal" data-drop="zar-drop">
+          <div class="co-row-ghost">ZAR</div>
+          <div class="co-row-inner">
+            <div class="co-row-accent" style="background:var(--cyan)"></div>
+            <div class="co-row-body">
+              <div class="co-row-top">
+                <span class="co-name">ZAR</span>
+                <span class="co-period cyan-text">2024 – Present</span>
+              </div>
+              <div class="co-role cyan-text">Global Talent Lead</div>
+              <div class="co-headline">Building the team behind a $20M-funded stablecoin wallet for the next billion users.</div>
+              <div class="co-meta">a16z · Dragonfly · Coinbase · VanEck · 200K+ users · 110+ countries · Techtonic design system · MACHINA AI suite</div>
+              <div class="co-dropdown" id="zar-drop">
+                <div class="co-dropdown-inner">
+                  <ul class="co-dropdown-list">
+                    <li class="li-d-cyan">Built the entire HR and TA function from zero — policies, interview loops, ATS setup, and tooling infrastructure for scale.</li>
+                    <li class="li-d-cyan">Scaled engineering and ops teams across APAC, MENA, EMEA and LATAM: blockchain, Flutter, Ruby, DevOps, Mobile, FinOps — 100% of critical headcount met.</li>
+                    <li class="li-d-cyan">Shipped a fully automated AI-powered HR portal solo via Claude Code — self-serve leave, one-click approvals, real-time notifications. Zero engineering support.</li>
+                    <li class="li-d-cyan">Built 15+ Rube MCP automation recipes (Gmail, Calendar, Sheets), reducing candidate outreach time by 80%.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="co-row-stat">
+              <div class="co-stat-num cyan-text" data-prefix="$" data-val="20" data-suffix="M">$20M</div>
+              <div class="co-stat-label">Raised</div>
+              <div class="co-chevron">↓</div>
+            </div>
+          </div>
+          <div class="co-row-glow" style="background:radial-gradient(ellipse at right center, rgba(124,58,237,0.12) 0%, transparent 65%)"></div>
         </div>
-        <div class="stat-item reveal rd1">
-          <span class="stat-number">90%+</span>
-          <span class="stat-label">Offer Acceptance Rate</span>
+
+        <div class="co-row reveal rd1" data-drop="jillion-drop">
+          <div class="co-row-ghost">Jillion</div>
+          <div class="co-row-inner">
+            <div class="co-row-accent" style="background:var(--pink)"></div>
+            <div class="co-row-body">
+              <div class="co-row-top">
+                <span class="co-name">Jillion</span>
+                <span class="co-period pink-text">2023 – 2024</span>
+              </div>
+              <div class="co-role pink-text">Global Talent Partner</div>
+              <div class="co-headline">Built a full global team across six regions from zero.</div>
+              <div class="co-meta">Bootstrapped · 80+ hires · 90% offer acceptance · EMEA · GCC · MENAP</div>
+              <div class="co-dropdown" id="jillion-drop">
+                <div class="co-dropdown-inner">
+                  <ul class="co-dropdown-list">
+                    <li class="li-d-pink">Built Product Engineering, Data, Security, Risk &amp; Fraud, FinOps, and IT Support teams — 90%+ offer acceptance throughout.</li>
+                    <li class="li-d-pink">Led tech recruiting across EMEA, GCC, and MENAP, filling key strategic roles across six regions.</li>
+                    <li class="li-d-pink">Aligned TA with business objectives alongside CEO, CTO, and Head of People — 20% reduction in time-to-hire.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="co-row-stat">
+              <div class="co-stat-num pink-text" data-prefix="" data-val="80" data-suffix="+">80+</div>
+              <div class="co-stat-label">Hires Placed</div>
+              <div class="co-chevron">↓</div>
+            </div>
+          </div>
+          <div class="co-row-glow" style="background:radial-gradient(ellipse at right center, rgba(244,63,94,0.10) 0%, transparent 65%)"></div>
         </div>
-        <div class="stat-item reveal rd2">
-          <span class="stat-number">80%</span>
-          <span class="stat-label">Faster Time-to-Hire</span>
+
+        <div class="co-row reveal rd2" data-drop="sadapay-drop">
+          <div class="co-row-ghost">Sadapay</div>
+          <div class="co-row-inner">
+            <div class="co-row-accent" style="background:#f97316"></div>
+            <div class="co-row-body">
+              <div class="co-row-top">
+                <span class="co-name">Sadapay</span>
+                <span class="co-period violet-text">2022 – 2023</span>
+              </div>
+              <div class="co-role violet-text">Talent Specialist</div>
+              <div class="co-headline">Built the team at Sadapay that led to a $50M acquisition — Pakistan's largest neobank.</div>
+              <div class="co-meta">4M+ users · $1.5B+ processed yearly · 700K viral waitlist · Team of 8 · Nukta design system · Acquired by Papara</div>
+              <div class="co-dropdown" id="sadapay-drop">
+                <div class="co-dropdown-inner">
+                  <ul class="co-dropdown-list">
+                    <li class="li-d-violet">Recruited across product, engineering, design, and security — from Head of Product to DevOps and Data Engineers.</li>
+                    <li class="li-d-violet">Reduced tech role TAT from 8 weeks to 10 business days — a 5× improvement in hiring velocity.</li>
+                    <li class="li-d-violet">Integrated Codu.ai assessments with Greenhouse ATS and authored company-wide recruiting guidelines on Notion.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="co-row-stat">
+              <div class="co-stat-num violet-text" data-prefix="$" data-val="50" data-suffix="M">$50M</div>
+              <div class="co-stat-label">Acquisition</div>
+              <div class="co-chevron">↓</div>
+            </div>
+          </div>
+          <div class="co-row-glow" style="background:radial-gradient(ellipse at right center, rgba(124,58,237,0.10) 0%, transparent 65%)"></div>
         </div>
-        <div class="stat-item reveal rd3">
-          <span class="stat-number">4</span>
-          <span class="stat-label">Regions: APAC · MENA · EMEA · LATAM</span>
-        </div>
+
       </div>
     </div>
   </div>
 
-  <!-- ═══ COMPANY TYPES — Dark ════════════════ -->
-  <div class="company-types">
-    <div class="section-inner">
-      <div class="label-dark reveal">Company Types</div>
-      <h2 class="h1-dark reveal">Where I've <span class="grad-text">Operated</span></h2>
-      <div class="types-grid">
-
-        <div class="type-card card-vc reveal">
-          <div class="card-type-tag tag-cyan">Venture-Backed · Web3</div>
-          <div class="card-co">ZAR</div>
-          <div class="card-sub">Dec 2024 – Present · Global Talent Lead</div>
-          <div class="card-headline">A $20M-FUNDED STABLECOIN WALLET FOR THE NEXT BILLION USERS.</div>
-          <div class="card-meta">a16z · Dragonfly · Coinbase · VanEck · 200K+ users · 110+ countries</div>
-          <div class="card-metric metric-cyan">100% Headcount Met</div>
-        </div>
-
-        <div class="type-card card-boot reveal rd1">
-          <div class="card-type-tag tag-pink">Bootstrapped · FinTech</div>
-          <div class="card-co">Jillion</div>
-          <div class="card-sub">Dec 2023 – Dec 2024 · Global Talent Partner</div>
-          <div class="card-headline">A FULL GLOBAL TEAM ACROSS SIX REGIONS. BUILT FROM ZERO.</div>
-          <div class="card-meta">Bootstrapped · 80+ hires · 90% offer acceptance · EMEA · GCC · MENAP</div>
-          <div class="card-metric metric-pink">90%+ Offer Acceptance</div>
-        </div>
-
-        <div class="type-card card-acq reveal rd2">
-          <div class="card-type-tag tag-violet">VC-Backed &amp; Acquired</div>
-          <div class="card-co">Sadapay</div>
-          <div class="card-sub">May 2022 – Dec 2023 · Talent Specialist</div>
-          <div class="card-headline">$50M ACQUISITION. PAKISTAN'S LARGEST NEOBANK.</div>
-          <div class="card-meta">4M+ users · $1.5B+ processed yearly · 700K viral waitlist · Acquired by Papara</div>
-          <div class="card-metric metric-violet">8 Wks → 10 Days TAT</div>
-        </div>
-
-      </div>
-    </div>
-  </div>
 
   <!-- ═══ ABOUT — White floating card ═════════ -->
   <div class="light-card" id="about">
@@ -631,7 +1152,7 @@
         <div>
           <h2 class="h1-light reveal">Building Teams<br/>That Ship</h2>
           <div class="about-text reveal">
-            <p>I'm a <strong>Lead Talent Acquisition Specialist</strong> with 4+ years of end-to-end technical hiring across global software and financial services. I don't just fill roles — I build the infrastructure around hiring so the next 10 hires happen faster than the first.</p>
+            <p>I'm a <strong>Global Talent Lead</strong> with 4+ years of end-to-end technical hiring across global software and financial services. I don't just fill roles — I build the infrastructure around hiring so the next 10 hires happen faster than the first.</p>
             <p>I work directly with <strong>CEOs and CTOs</strong> to define headcount plans, architect recruiting processes from zero, and place the people who genuinely move things forward. My track record spans engineers, product managers, designers, security specialists, FinOps, and C-suite leadership.</p>
           </div>
         </div>
@@ -689,113 +1210,150 @@
     </div>
   </div>
 
-  <!-- ═══ EXPERIENCE — Dark ═══════════════════ -->
-  <div class="dark-section" id="experience">
-    <div class="section-inner">
-      <div class="label-dark reveal">Experience</div>
-      <h2 class="h1-dark reveal">Where I've <span class="grad-text">Built</span></h2>
-      <div class="exp-grid">
 
-        <div class="exp-item reveal">
-          <div class="exp-left">
-            <div class="exp-period col-cyan">Dec 2024 — Present</div>
-            <div class="exp-co">ZAR</div>
-            <div class="exp-role">Global Talent Lead</div>
-            <div class="exp-badge">Web3 · a16z, DragonFly, VanEck · $20M raised</div>
-          </div>
-          <div class="exp-right">
-            <ul class="exp-bullets">
-              <li class="li-cyan">Built the entire HR and TA function from zero — policies, interview loops, ATS setup, and tooling infrastructure for scale.</li>
-              <li class="li-cyan">Scaled engineering and ops teams across APAC, MENA, EMEA and LATAM: blockchain, Flutter, Ruby, DevOps, Mobile, FinOps — 100% of critical headcount met.</li>
-              <li class="li-cyan">Shipped a fully automated AI-powered HR portal solo via Claude Code — self-serve leave, one-click approvals, real-time notifications. Zero engineering support.</li>
-              <li class="li-cyan">Built 15+ Rube MCP automation recipes (Gmail, Calendar, Sheets), reducing candidate outreach time by 80%.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="exp-item reveal">
-          <div class="exp-left">
-            <div class="exp-period col-pink">Dec 2023 — Dec 2024</div>
-            <div class="exp-co">Jillion</div>
-            <div class="exp-role">Global Talent Partner — Tech</div>
-            <div class="exp-badge">Bootstrapped · Closed 2024</div>
-          </div>
-          <div class="exp-right">
-            <ul class="exp-bullets">
-              <li class="li-pink">Built Product Engineering, Data, Security, Risk &amp; Fraud, FinOps, and IT Support teams — 90%+ offer acceptance throughout.</li>
-              <li class="li-pink">Led tech recruiting across EMEA, GCC, and MENAP, filling key strategic roles across six regions.</li>
-              <li class="li-pink">Aligned TA with business objectives alongside CEO, CTO, and Head of People — 20% reduction in time-to-hire.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="exp-item reveal">
-          <div class="exp-left">
-            <div class="exp-period col-violet">May 2022 — Dec 2023</div>
-            <div class="exp-co">Sadapay</div>
-            <div class="exp-role">Talent Specialist</div>
-            <div class="exp-badge">FinTech · Acquired by Papara · $10.7M Seed</div>
-          </div>
-          <div class="exp-right">
-            <ul class="exp-bullets">
-              <li class="li-violet">Recruited across product, engineering, design, and security — from Head of Product to DevOps and Data Engineers.</li>
-              <li class="li-violet">Reduced tech role TAT from 8 weeks to 10 business days — a 5× improvement in hiring velocity.</li>
-              <li class="li-violet">Integrated Codu.ai assessments with Greenhouse ATS and authored company-wide recruiting guidelines on Notion.</li>
-            </ul>
-          </div>
-        </div>
-
-      </div>
-    </div>
+  <!-- ═══ STRIPE FLOW — accent strip between About and Expertise ═══ -->
+  <div class="stripe-flow" aria-hidden="true">
+    <div class="sf-blob sf-blob-1"></div>
+    <div class="sf-blob sf-blob-2"></div>
+    <div class="sf-blob sf-blob-3"></div>
+    <div class="sf-blob sf-blob-4"></div>
   </div>
 
-  <!-- ═══ EXPERTISE — White floating card ═════ -->
-  <div class="light-card" id="expertise">
+  <!-- ═══ EXPERTISE — Seamless continuation ═════ -->
+  <div class="light-card-cont" id="expertise">
+    <div class="expertise-glow" aria-hidden="true">
+      <div class="eg-blob eg-blob-1"></div>
+      <div class="eg-blob eg-blob-2"></div>
+      <div class="eg-blob eg-blob-3"></div>
+      <div class="eg-blob eg-blob-4"></div>
+    </div>
     <div class="section-inner">
-      <div class="label-light reveal">Expertise</div>
-      <h2 class="h1-light reveal">Who I <span style="color:var(--pink)">Hire</span></h2>
+      <div class="label-light reveal" style="justify-content:center">Expertise</div>
+      <h2 class="h1-light reveal" style="text-align:center">Who I <span style="color:var(--pink)">Hire</span></h2>
       <div class="expertise-layout reveal">
-        <div class="exp-row" style="flex-wrap:wrap">
-          <div class="exp-tag featured"><span class="exp-tag-icon">⛓</span> Blockchain Engineers</div>
-          <div class="exp-tag"><span class="exp-tag-icon">📱</span> Flutter / Mobile</div>
-          <div class="exp-tag featured"><span class="exp-tag-icon">👤</span> C-Suite &amp; Senior Leaders</div>
+
+        <div class="exp-sub-label">Domains</div>
+        <div class="exp-pool">
+          <span class="exp-tag--domain">Fintech</span>
+          <span class="exp-tag--domain">Crypto / Web3</span>
+          <span class="exp-tag--domain">Neobanking</span>
+          <span class="exp-tag--domain">SaaS</span>
+          <span class="exp-tag--domain">E-commerce</span>
+          <span class="exp-tag--domain">Marketplaces</span>
         </div>
-        <div class="exp-row" style="flex-wrap:wrap">
-          <div class="exp-tag"><span class="exp-tag-icon">⚙️</span> DevOps &amp; Infra</div>
-          <div class="exp-tag featured"><span class="exp-tag-icon">🛠</span> Product Engineering</div>
-          <div class="exp-tag"><span class="exp-tag-icon">💰</span> FinOps</div>
-          <div class="exp-tag"><span class="exp-tag-icon">🔐</span> Data &amp; Security</div>
+
+        <div class="exp-sub-label">Roles</div>
+        <div class="exp-pool">
+          <span class="exp-tag exp-tag--violet">Blockchain Engineers</span>
+          <span class="exp-tag exp-tag--rose">Executive &amp; Leadership</span>
+          <span class="exp-tag exp-tag--violet">Product Engineering</span>
+          <span class="exp-tag exp-tag--violet">Mobile Engineering</span>
+          <span class="exp-tag exp-tag--amber">Financial Operations</span>
+          <span class="exp-tag exp-tag--pink">Product Design</span>
+          <span class="exp-tag exp-tag--violet">DevOps &amp; Infrastructure</span>
+          <span class="exp-tag exp-tag--pink">Product Management</span>
+          <span class="exp-tag exp-tag--violet">Data &amp; Security</span>
+          <span class="exp-tag exp-tag--pink">IT &amp; Support</span>
+          <span class="exp-tag exp-tag--amber">Risk &amp; Compliance</span>
         </div>
-        <div class="exp-row" style="flex-wrap:wrap">
-          <div class="exp-tag featured"><span class="exp-tag-icon">🛡</span> Risk &amp; Fraud</div>
-          <div class="exp-tag"><span class="exp-tag-icon">📊</span> Product Management</div>
-          <div class="exp-tag"><span class="exp-tag-icon">🎨</span> Product Design</div>
-        </div>
+
       </div>
     </div>
   </div>
 
   <!-- ═══ TOOLS — Dark ════════════════════════ -->
-  <div class="dark-section2">
-    <div class="section-inner">
-      <div class="label-dark reveal">Stack</div>
-      <h2 class="h1-dark reveal">Tools I <span class="grad-text">Work With</span></h2>
-      <div class="tools-flow reveal rd1">
-        <span class="tool-pill">LinkedIn Recruiter</span>
-        <span class="tool-pill">Greenhouse</span>
-        <span class="tool-pill">Ashby</span>
-        <span class="tool-pill">Juicebox (People GPT)</span>
-        <span class="tool-pill">Claude Code</span>
-        <span class="tool-pill">Rube MCP</span>
-        <span class="tool-pill">Figma</span>
-        <span class="tool-pill">Notion</span>
-        <span class="tool-pill">Lattice</span>
-        <span class="tool-pill">Apollo.io</span>
-        <span class="tool-pill">GitHub</span>
-        <span class="tool-pill">Fizzy</span>
-        <span class="tool-pill">Google Workspace</span>
-        <span class="tool-pill">ChatGPT+</span>
+  <div class="tools-section">
+    <div class="tools-header reveal">
+      <div class="label-light">Stack</div>
+      <h2 class="h1-dark">Tools I <span class="grad-text">Work With</span></h2>
+    </div>
+
+    <div class="logo-grid reveal">
+
+      <div class="logo-tile">
+        <span class="logo-mark" style="background:#D97757">
+          <img class="logo-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/claude.svg" alt="Claude">
+        </span>
+        <span class="logo-name">Claude Code</span>
       </div>
+
+      <div class="logo-tile">
+        <span class="logo-mark" style="background:#10a37f">
+          <img class="logo-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/openai.svg" alt="OpenAI">
+        </span>
+        <span class="logo-name">ChatGPT+</span>
+      </div>
+
+      <div class="logo-tile">
+        <span class="logo-mark" style="background:#f97316">R</span>
+        <span class="logo-name">Rube MCP</span>
+      </div>
+
+      <div class="logo-tile">
+        <span class="logo-mark" style="background:#0A66C2">
+          <img class="logo-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/linkedin.svg" alt="LinkedIn">
+        </span>
+        <span class="logo-name">LinkedIn Recruiter</span>
+      </div>
+
+      <div class="logo-tile">
+        <span class="logo-mark" style="background:#ec4899">JB</span>
+        <span class="logo-name">Juicebox</span>
+      </div>
+
+      <div class="logo-tile">
+        <span class="logo-mark" style="background:#7C4DFF">AP</span>
+        <span class="logo-name">Apollo.io</span>
+      </div>
+
+      <div class="logo-tile">
+        <span class="logo-mark" style="background:#24B47E">GH</span>
+        <span class="logo-name">Greenhouse</span>
+      </div>
+
+      <div class="logo-tile">
+        <span class="logo-mark" style="background:#5856D6">AS</span>
+        <span class="logo-name">Ashby</span>
+      </div>
+
+      <div class="logo-tile">
+        <span class="logo-mark" style="background:#6B46C1">L</span>
+        <span class="logo-name">Lattice</span>
+      </div>
+
+      <div class="logo-tile">
+        <span class="logo-mark" style="background:#7c3aed">FZ</span>
+        <span class="logo-name">Fizzy</span>
+      </div>
+
+      <div class="logo-tile">
+        <span class="logo-mark" style="background:#191919">
+          <img class="logo-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/notion.svg" alt="Notion">
+        </span>
+        <span class="logo-name">Notion</span>
+      </div>
+
+      <div class="logo-tile">
+        <span class="logo-mark" style="background:#4285F4">
+          <img class="logo-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/google.svg" alt="Google">
+        </span>
+        <span class="logo-name">Google Workspace</span>
+      </div>
+
+      <div class="logo-tile">
+        <span class="logo-mark" style="background:#F24E1E">
+          <img class="logo-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/figma.svg" alt="Figma">
+        </span>
+        <span class="logo-name">Figma</span>
+      </div>
+
+      <div class="logo-tile">
+        <span class="logo-mark" style="background:#24292e">
+          <img class="logo-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/github.svg" alt="GitHub">
+        </span>
+        <span class="logo-name">GitHub</span>
+      </div>
+
     </div>
   </div>
 
@@ -803,7 +1361,7 @@
   <div class="contact-section" id="contact">
     <div class="contact-glow"></div>
     <div class="contact-inner">
-      <div class="label-dark reveal" style="justify-content:center">Contact</div>
+      <div class="label-light reveal" style="justify-content:center">Contact</div>
       <h2 class="contact-head reveal">
         Ready to Build<br/>Your <span class="grad-text">Next Team?</span>
       </h2>
@@ -826,7 +1384,7 @@
     </div>
     <div class="footer-right">
       Based in Pakistan · Open to relocation
-      <span>Lead Talent Acquisition</span>
+      <span>Global Talent Lead</span>
     </div>
   </footer>
 
@@ -858,245 +1416,143 @@
   },{threshold:0.1,rootMargin:'0px 0px -30px 0px'});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
-  /* ═════════════════════════════════════════════
-     GLOBE
-  ═════════════════════════════════════════════ */
-  const canvas=document.getElementById('gc');
-  const ctx=canvas.getContext('2d');
-  let W,H,R,cx,cy,dpr=Math.min(devicePixelRatio,2);
-  let rot=0.62, rotTarget=0.62, mouseXoff=0;
-
-  function resize(){
-    W=canvas.offsetWidth; H=canvas.offsetHeight;
-    canvas.width=W*dpr; canvas.height=H*dpr;
-    ctx.scale(dpr,dpr);
-    R=Math.min(W,H)*0.42; cx=W*0.5; cy=H*0.5;
+  /* ── COLLAPSIBLE ROWS ─── */
+  function openRow(row) {
+    const drop = document.getElementById(row.dataset.drop);
+    drop.classList.add('open');
+    drop.style.maxHeight = drop.scrollHeight + 'px';
+    row.classList.add('open');
   }
-  window.addEventListener('resize',resize); resize();
-
-  canvas.parentElement.addEventListener('mousemove',e=>{
-    const r=canvas.getBoundingClientRect();
-    mouseXoff=(e.clientX-r.left-r.width/2)/r.width;
-  });
-
-  /* ── Helpers ─── */
-  function ll2v(lat,lng){
-    const la=lat*Math.PI/180, lo=lng*Math.PI/180;
-    return {x:Math.cos(la)*Math.cos(lo), y:Math.sin(la), z:Math.cos(la)*Math.sin(lo)};
+  function closeRow(row) {
+    const drop = document.getElementById(row.dataset.drop);
+    drop.style.maxHeight = '0';
+    drop.classList.remove('open');
+    row.classList.remove('open');
   }
-  function rotY(p,a){
-    return {x:p.x*Math.cos(a)-p.z*Math.sin(a), y:p.y, z:p.x*Math.sin(a)+p.z*Math.cos(a)};
-  }
-
-  /* ── Continent outline polylines ─── */
-  const COASTS=[
-    // North America
-    [[72,-105],[75,-100],[78,-110],[80,-90],[83,-70],[80,-62],[75,-80],[70,-85],[65,-95],[62,-77],
-     [60,-65],[55,-60],[50,-55],[47,-53],[45,-65],[42,-70],[38,-76],[35,-76],[30,-81],[25,-80],
-     [22,-90],[16,-95],[9,-83],[8,-77],[14,-87],[20,-87],[22,-90],[28,-97],[32,-117],
-     [36,-122],[40,-124],[45,-125],[50,-127],[55,-130],[58,-138],[60,-142],[65,-168],
-     [70,-160],[70,-140],[68,-135],[65,-125],[62,-122],[60,-120],[60,-130],[65,-130],
-     [68,-120],[70,-105],[72,-105]],
-    // Greenland
-    [[83,-30],[80,-18],[76,-20],[72,-24],[69,-27],[66,-38],[64,-52],[67,-55],[70,-52],
-     [74,-56],[76,-60],[80,-58],[83,-42],[83,-30]],
-    // South America
-    [[12,-72],[10,-62],[8,-60],[5,-52],[3,-52],[0,-50],[-5,-35],[-10,-37],[-15,-39],
-     [-23,-43],[-30,-51],[-33,-53],[-38,-60],[-42,-64],[-50,-69],[-55,-66],[-53,-71],
-     [-50,-75],[-45,-76],[-42,-73],[-38,-73],[-30,-72],[-20,-70],[-10,-78],[-5,-81],
-     [0,-80],[5,-77],[8,-77],[12,-72]],
-    // Europe
-    [[71,28],[68,30],[65,14],[62,5],[58,5],[55,9],[52,4],[51,3],[48,2],[44,1],[38,-9],
-     [36,-6],[36,3],[37,7],[38,12],[40,18],[42,20],[45,14],[44,12],[42,14],[40,18],
-     [38,22],[37,22],[42,27],[47,30],[47,37],[50,37],[54,38],[58,28],[60,22],[64,25],[68,28],[71,28]],
-    // Africa
-    [[37,-6],[36,3],[37,10],[33,11],[30,32],[22,37],[15,42],[12,44],[10,40],[5,35],
-     [0,30],[-5,34],[-10,38],[-18,35],[-26,33],[-35,27],[-35,25],[-30,17],[-25,15],
-     [-20,12],[-15,13],[-10,15],[0,8],[5,2],[4,-2],[5,-5],[6,-3],[5,2],[10,1],[15,2],
-     [20,16],[25,15],[30,32],[36,10],[37,-6]],
-    // Arabian Peninsula (standalone — no connection to Africa or India)
-    [[30,32],[27,35],[22,37],[15,43],[12,45],[13,50],[17,54],[22,59],[24,58],[26,57],
-     [27,57],[28,50],[30,47],[30,40],[30,37],[30,32]],
-    // India peninsula (standalone)
-    [[28,66],[23,68],[20,68],[15,74],[8,77],[8,80],[10,80],[15,80],[20,86],[22,88],
-     [20,86],[10,79],[8,77],[15,73],[20,72],[23,68],[28,66]],
-    // Asia main (no Arabian Peninsula detour)
-    [[71,28],[60,60],[55,73],[55,80],[55,95],[55,105],[50,105],[48,130],[45,135],
-     [45,140],[42,130],[38,130],[35,128],[32,122],[30,122],[25,120],[20,110],[15,110],
-     [10,105],[5,104],[0,104],[-5,104],[-8,115],[-8,114],[-5,105],[5,103],[10,100],
-     [15,100],[22,100],[28,100],[35,100],[40,100],[45,100],[50,100],[55,95],[60,95],
-     [65,97],[70,105],[72,100],[75,100],[78,105],[80,100],[83,70],[80,60],[75,60],[71,28]],
-    // SE Asia (Sumatra/Java)
-    [[5,95],[2,98],[0,100],[-2,103],[-5,106],[-7,110],[-8,114],[-7,110],[-5,106],[-2,103],[0,100],[2,98],[5,95]],
-    // Japan
-    [[45,142],[43,145],[42,143],[40,142],[37,138],[36,137],[34,137],[33,131],[34,130],
-     [35,132],[38,140],[40,140],[43,141],[45,142]],
-    // Australia
-    [[-10,142],[-14,136],[-12,130],[-16,124],[-22,114],[-27,114],[-31,116],[-34,120],
-     [-35,138],[-38,140],[-38,145],[-37,150],[-32,153],[-26,153],[-22,150],[-18,148],[-14,144],[-10,142]],
-    // UK
-    [[58,-5],[57,-2],[54,-1],[52,2],[51,1],[50,-4],[52,-5],[55,-5],[58,-5]],
-  ].map(pts=>pts.map(([lat,lng])=>ll2v(lat,lng)));
-
-  /* ── Graticule grid ─── */
-  const GRID=[];
-  [-60,-30,0,30,60].forEach(lat=>{
-    const pts=[]; for(let lg=-180;lg<=180;lg+=5)pts.push(ll2v(lat,lg)); GRID.push(pts);
-  });
-  for(let lg=-180;lg<180;lg+=30){
-    const pts=[]; for(let lt=-88;lt<=88;lt+=5)pts.push(ll2v(lt,lg)); GRID.push(pts);
-  }
-
-  /* ── Pins ─── */
-  const PINS=[
-    // APAC
-    {lat:-8.3, lng:115.1, label:'Bali',        col:'#00e5ff', region:'APAC',  phase:0,   lx:1, ly:-1},
-    {lat: 1.35,lng:103.8, label:'Singapore',   col:'#00e5ff', region:'APAC',  phase:1.1, lx:1, ly:0},
-    {lat:-33.9,lng:151.2, label:'Sydney',      col:'#00e5ff', region:'APAC',  phase:1.8, lx:1, ly:-1},
-    {lat:35.7, lng:139.7, label:'Tokyo',       col:'#00e5ff', region:'APAC',  phase:2.3, lx:1, ly:-1},
-    {lat:22.3, lng:114.2, label:'Hong Kong',   col:'#00e5ff', region:'APAC',  phase:0.8, lx:1, ly:1},
-    // MENA / GCC
-    {lat:25.2, lng: 55.3, label:'Dubai',       col:'#ff2d9b', region:'MENA',  phase:0.6, lx:1, ly:-1},
-    {lat:25.3, lng: 51.5, label:'Doha',        col:'#ff2d9b', region:'MENA',  phase:1.3, lx:-1,ly:-1},
-    {lat:24.7, lng: 46.7, label:'Riyadh',      col:'#ff2d9b', region:'GCC',   phase:0.3, lx:-1,ly:1},
-    // Africa
-    {lat:-33.9,lng: 18.4, label:'Cape Town',   col:'#34d399', region:'Africa',phase:1.0, lx:-1,ly:1},
-    // EMEA
-    {lat:33.7, lng: 73.1, label:'Islamabad',   col:'#a78bfa', region:'EMEA',  phase:0.9, lx:1, ly:-1},
-    {lat:51.5, lng: -0.1, label:'London',      col:'#a78bfa', region:'EMEA',  phase:1.6, lx:-1,ly:-1},
-    {lat:52.5, lng: 13.4, label:'Berlin',      col:'#a78bfa', region:'EMEA',  phase:0.2, lx:1, ly:-1},
-    {lat:52.4, lng:  4.9, label:'Amsterdam',   col:'#a78bfa', region:'EMEA',  phase:2.1, lx:1, ly:1},
-    // LATAM
-    {lat:19.4, lng:-99.1, label:'Mexico City', col:'#f59e0b', region:'LATAM', phase:0.7, lx:-1,ly:-1},
-    {lat:-23.5,lng:-46.6, label:'São Paulo',   col:'#f59e0b', region:'LATAM', phase:1.4, lx:-1,ly:1},
-    {lat:-34.6,lng:-58.4, label:'Buenos Aires',col:'#f59e0b', region:'LATAM', phase:0.4, lx:-1,ly:-1},
-  ];
-  PINS.forEach(p=>{ p.v=ll2v(p.lat,p.lng); });
-
-  /* ── Draw polyline on globe ─── */
-  function strokePath(pts,rot,color,lw){
-    let started=false; ctx.beginPath();
-    pts.forEach(pt=>{
-      const rp=rotY(pt,rot);
-      if(rp.z<-0.06){started=false;return;}
-      const px=cx+rp.x*R, py=cy-rp.y*R;
-      if(!started){ctx.moveTo(px,py);started=true;} else ctx.lineTo(px,py);
+  document.querySelectorAll('.co-row[data-drop]').forEach(row => {
+    row.addEventListener('click', () => {
+      const isOpen = row.classList.contains('open');
+      document.querySelectorAll('.co-row[data-drop]').forEach(r => closeRow(r));
+      if (!isOpen) openRow(row);
     });
-    ctx.strokeStyle=color; ctx.lineWidth=lw; ctx.stroke();
-  }
+  });
+  // Auto-open first card
+  const firstRow = document.querySelector('.co-row[data-drop]');
+  if (firstRow) openRow(firstRow);
 
-  /* ── Draw great-circle arc ─── */
-  function drawArc(v1,v2,rot,color,lw){
-    const dot=v1.x*v2.x+v1.y*v2.y+v1.z*v2.z;
-    const omega=Math.acos(Math.min(1,Math.max(-1,dot)));
-    const sinO=Math.sin(omega); const N=50;
-    let started=false; ctx.beginPath();
-    for(let i=0;i<=N;i++){
-      const t=i/N;
-      const a=sinO>0.001?Math.sin((1-t)*omega)/sinO:(1-t);
-      const b=sinO>0.001?Math.sin(t*omega)/sinO:t;
-      const pt=rotY({x:a*v1.x+b*v2.x,y:a*v1.y+b*v2.y,z:a*v1.z+b*v2.z},rot);
-      if(pt.z<0){started=false;continue;}
-      const px=cx+pt.x*R,py=cy-pt.y*R;
-      if(!started){ctx.moveTo(px,py);started=true;} else ctx.lineTo(px,py);
-    }
-    ctx.strokeStyle=color; ctx.lineWidth=lw; ctx.stroke();
-  }
-
-  /* ── Main draw loop ─── */
-  function draw(){
-    ctx.clearRect(0,0,W,H);
-
-    /* Atmosphere behind globe */
-    const atm=ctx.createRadialGradient(cx,cy,R*0.1,cx,cy,R*1.18);
-    atm.addColorStop(0,'rgba(0,10,40,0.7)');
-    atm.addColorStop(0.75,'rgba(0,229,255,0.04)');
-    atm.addColorStop(1,'transparent');
-    ctx.beginPath(); ctx.arc(cx,cy,R*1.18,0,Math.PI*2);
-    ctx.fillStyle=atm; ctx.fill();
-
-    /* Outer glow ring */
-    const glw=ctx.createRadialGradient(cx,cy,R*0.98,cx,cy,R*1.15);
-    glw.addColorStop(0,'rgba(0,229,255,0.12)');
-    glw.addColorStop(1,'transparent');
-    ctx.beginPath(); ctx.arc(cx,cy,R*1.15,0,Math.PI*2);
-    ctx.fillStyle=glw; ctx.fill();
-
-    /* Sphere base */
-    const sph=ctx.createRadialGradient(cx-R*0.25,cy-R*0.25,0,cx,cy,R);
-    sph.addColorStop(0,'rgba(0,30,60,0.6)');
-    sph.addColorStop(1,'rgba(0,5,20,0.8)');
-    ctx.beginPath(); ctx.arc(cx,cy,R,0,Math.PI*2);
-    ctx.fillStyle=sph; ctx.fill();
-
-    /* Graticule */
-    GRID.forEach(pts=>strokePath(pts,rot,'rgba(0,180,220,0.07)',0.4));
-
-    /* Continent outlines */
-    COASTS.forEach(pts=>strokePath(pts,rot,'rgba(0,229,255,0.55)',1.4));
-
-
-    /* Sphere edge highlight */
-    const edge=ctx.createRadialGradient(cx,cy,R*0.82,cx,cy,R);
-    edge.addColorStop(0,'transparent');
-    edge.addColorStop(1,'rgba(0,229,255,0.1)');
-    ctx.beginPath(); ctx.arc(cx,cy,R,0,Math.PI*2);
-    ctx.fillStyle=edge; ctx.fill();
-
-    /* Pins — with anti-overlap label logic */
-    const t=Date.now()*0.001;
-    const usedLabels=[];
-
-    // Sort by z-depth so front pins draw last (on top)
-    const sorted=[...PINS].map((p,i)=>({...p,idx:i,rp:rotY(p.v,rot)}))
-      .sort((a,b)=>a.rp.z-b.rp.z);
-
-    sorted.forEach(pin=>{
-      const rp=pin.rp;
-      if(rp.z<0.08) return;
-      const f=Math.min(1,(rp.z-0.08)*4);
-      const px=cx+rp.x*R, py=cy-rp.y*R;
-
-      // Pulsing rings
-      const p1=(Math.sin(t*1.3+pin.phase)+1)/2;
-      const p2=(Math.sin(t*1.3+pin.phase+Math.PI*0.7)+1)/2;
-      ctx.beginPath(); ctx.arc(px,py,5+p1*16,0,Math.PI*2);
-      ctx.strokeStyle=pin.col+Math.floor((1-p1)*60*f).toString(16).padStart(2,'0');
-      ctx.lineWidth=0.8; ctx.stroke();
-      ctx.beginPath(); ctx.arc(px,py,4+p2*10,0,Math.PI*2);
-      ctx.strokeStyle=pin.col+Math.floor((1-p2)*35*f).toString(16).padStart(2,'0');
-      ctx.lineWidth=0.5; ctx.stroke();
-
-      // Pin dot
-      ctx.beginPath(); ctx.arc(px,py,3.5,0,Math.PI*2);
-      ctx.fillStyle=pin.col;
-      ctx.shadowColor=pin.col; ctx.shadowBlur=12;
-      ctx.fill(); ctx.shadowBlur=0;
-
-      // Label — only when pin is near globe centre (clearly facing viewer)
-      if(rp.z<0.45) return;
-      const lw=8, lh=12;
-      const lx=px+(pin.lx>0?10:-10);
-      const ly=py+(pin.ly>0?14:-8);
-      const overlaps=usedLabels.some(u=>Math.hypot(u[0]-lx,u[1]-ly)<65);
-      if(!overlaps){
-        ctx.font=`500 10px 'Barlow Condensed', sans-serif`;
-        ctx.fillStyle=pin.col+Math.floor(f*220).toString(16).padStart(2,'0');
-        ctx.textAlign=pin.lx>0?'left':'right';
-        ctx.fillText(pin.label,lx,ly);
-        ctx.textAlign='left';
-        usedLabels.push([lx,ly]);
-      }
+  /* ── COUNTER ANIMATION ─── */
+  const counterObs=new IntersectionObserver(es=>{
+    es.forEach(e=>{
+      if(!e.isIntersecting) return;
+      const el=e.target;
+      const target=+el.dataset.val;
+      const prefix=el.dataset.prefix||'';
+      const suffix=el.dataset.suffix||'';
+      const duration=1400;
+      let startTs=null;
+      const step=ts=>{
+        if(!startTs) startTs=ts;
+        const p=Math.min((ts-startTs)/duration,1);
+        const ease=1-Math.pow(1-p,3);
+        el.textContent=prefix+Math.round(ease*target)+suffix;
+        if(p<1) requestAnimationFrame(step);
+        else el.textContent=prefix+target+suffix;
+      };
+      requestAnimationFrame(step);
+      counterObs.unobserve(el);
     });
-  }
+  },{threshold:0.5});
+  document.querySelectorAll('.co-stat-num').forEach(el=>counterObs.observe(el));
 
-  /* ── Animation ─── */
-  (function loop(){
-    rotTarget+=0.0025+mouseXoff*0.002;
-    rot+=(rotTarget-rot)*0.06;
-    draw();
-    requestAnimationFrame(loop);
-  })();
+  </script>
+
+  <script type="module">
+    import createGlobe from 'https://esm.sh/cobe@0.6.3';
+
+    window.addEventListener('load', () => {
+      const canvas = document.getElementById('gc');
+      if (!canvas) return;
+
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      const SIZE = canvas.offsetWidth || 500;
+      let phi = 1.0, theta = 0.15, isDragging = false, prevX = 0, prevY = 0;
+
+      const globe = createGlobe(canvas, {
+        devicePixelRatio: dpr,
+        width:  SIZE * dpr,
+        height: SIZE * dpr,
+        phi, theta,
+        dark: 0,
+        diffuse: 1.1,
+        mapSamples: 24000,
+        mapBrightness: 5,
+        baseColor:   [1.0,  0.96, 0.93],
+        markerColor: [0.49, 0.23, 0.93],
+        glowColor:   [1.0, 0.60, 0.72],
+        markers: [
+          {location:[-8.3,  115.1], size:.04},
+          {location:[ 1.35, 103.8], size:.05},
+          {location:[-33.9, 151.2], size:.04},
+          {location:[35.7,  139.7], size:.04},
+          {location:[22.3,  114.2], size:.04},
+          {location:[33.7,   73.1], size:.05},
+          {location:[25.2,   55.3], size:.06},
+          {location:[25.3,   51.5], size:.04},
+          {location:[24.7,   46.7], size:.05},
+          {location:[-33.9,  18.4], size:.04},
+          {location:[51.5,   -0.1], size:.06},
+          {location:[52.5,   13.4], size:.04},
+          {location:[52.4,    4.9], size:.04},
+          {location:[19.4,  -99.1], size:.04},
+          {location:[-23.5, -46.6], size:.05},
+          {location:[-34.6, -58.4], size:.04},
+        ],
+        onRender: (state) => {
+          if (!isDragging) phi += 0.003;
+          state.phi    = phi;
+          state.theta  = theta;
+          state.width  = (canvas.offsetWidth  || SIZE) * dpr;
+          state.height = (canvas.offsetHeight || SIZE) * dpr;
+
+          // Cycle glow through soft pastel tones
+          const glowPalette = [
+            [1.0,  0.65, 0.76],   // rose
+            [1.0,  0.75, 0.38],   // amber
+            [0.75, 0.58, 1.0 ],   // lavender
+            [1.0,  0.55, 0.82],   // pink
+          ];
+          const t     = Date.now() / 5000;
+          const i     = Math.floor(t) % glowPalette.length;
+          const j     = (i + 1) % glowPalette.length;
+          const frac  = t % 1;
+          const ease  = (Math.sin(frac * Math.PI - Math.PI / 2) + 1) / 2;
+          state.glowColor = glowPalette[i].map((v, k) => v + (glowPalette[j][k] - v) * ease);
+        }
+      });
+
+      canvas.addEventListener('mousedown', e => {
+        isDragging = true; prevX = e.clientX; prevY = e.clientY;
+      });
+      window.addEventListener('mousemove', e => {
+        if (!isDragging) return;
+        phi   -= (e.clientX - prevX) * 0.005;
+        theta  = Math.max(-Math.PI/2, Math.min(Math.PI/2, theta + (e.clientY - prevY) * 0.005));
+        prevX = e.clientX; prevY = e.clientY;
+      });
+      window.addEventListener('mouseup', () => { isDragging = false; });
+
+      canvas.addEventListener('touchstart', e => {
+        isDragging = true;
+        prevX = e.touches[0].clientX; prevY = e.touches[0].clientY;
+      }, {passive:true});
+      window.addEventListener('touchmove', e => {
+        if (!isDragging) return;
+        phi   -= (e.touches[0].clientX - prevX) * 0.005;
+        theta  = Math.max(-Math.PI/2, Math.min(Math.PI/2, theta + (e.touches[0].clientY - prevY) * 0.005));
+        prevX = e.touches[0].clientX; prevY = e.touches[0].clientY;
+      }, {passive:true});
+      window.addEventListener('touchend', () => { isDragging = false; });
+    });
   </script>
 </body>
 </html>
